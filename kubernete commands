@@ -1,0 +1,33 @@
+# To create pod using pod manifest yml
+$ kubectl apply -f <pod-manifest-yml> -n <namespace-name>  or kubectl create -f <pod-manifest-yml>  -n <namespace-name>
+
+# To delete pod using pod manifest yml
+$ kubectl delete -f <pod-manifest-yml>  -n <namespace-name>
+
+
+# Checking pod creation status
+$ kubectl get pods  -n <namespace-name>
+
+# To describe the pod information
+$ kubectl describe pod <pod-name>  -n <namespace-name>
+
+# To get pod logs
+$ kubectl logs <pod-name>  -n <namespace-name>
+
+# To check in which node pod is running
+$ kubectl get pods -o wide  -n <namespace-name>
+
+# to list all services in the current namespacess
+$ kubectl get svc  -n <namespace-name>
+
+# To describe the svc(service) information
+$ kubectl describe svc <service-name>  -n <namespace-name>
+
+#To check pv is created
+$ kubectl get pv  -n <namespace-name>
+
+# To check pvc is created
+$ kubectl get pvc  -n <namespace-name>
+
+# Command to enter in to the container
+$ kubectl exec -it <pod-name> /bin/sh  -n <namespace-name>
